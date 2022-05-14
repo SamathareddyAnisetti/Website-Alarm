@@ -1,0 +1,32 @@
+import time
+import os
+import getpass
+import webbrowser
+import stdiomask
+from playsound import playsound
+set_alarm=input("Set alarm for website(e.g. 07:30:00):")
+url=input("Enter the Website you want to open: ")
+stop_alarm=input("stop alarm for website: ")
+current_time=time.strftime("%I:%M:%S")
+current_time1=time.strftime("%I:%M:%S")
+while(current_time != set_alarm):
+    print("The time is "+current_time)
+    current_time=time.strftime("%I:%M:%S")
+    time.sleep(1)
+if(current_time == set_alarm):
+    #for i in range(repitions):
+    playsound('punkys.wav')
+    pwd=stdiomask.getpass(prompt="Enter Password=",mask='*')
+    if pwd=='website':
+        print("Opening Now:"+url)
+        webbrowser.open(url)
+        while(current_time1 != stop_alarm):
+           print("The time is "+current_time1)
+           current_time1=time.strftime("%I:%M:%S")
+           time.sleep(1)
+           if(current_time1 == stop_alarm):
+                        print("closing Now: "+url)
+                        #browserExe = "chrome.exe"
+                        #os.system("taskkill /f /im "+browserExe) 
+                        os.system("taskkill /im msedge.exe /f")
+
