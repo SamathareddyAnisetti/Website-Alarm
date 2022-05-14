@@ -1,0 +1,4 @@
+# Website-Alarm
+
+This Project "Website Alarm" is used to open a specific website at a particular time specified by the user.The Website can be any URL of the users choice.In the Program user provides the URL of the website he wants to open .In  the similar way ,the user feeds  the opening time as an input to the program and also closing time as an input.Then in backend program compares the opening time  with  the system time and continously displays time until it equal it equal to opening time.When equal to opening time the alarm rings and ask for a password.If password matches Website opens in default browser of the system.And after again it compares with stop time whenever stoptime equal to system time then browser closes automatically.The Project is designed using Python Programming Language. It includes different packages like time,webbrowser,stdiomask,os,playsound.
+
